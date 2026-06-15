@@ -1,4 +1,4 @@
-# Catalog API with FastAPI and SQLite
+# Catalog API
 
 A simple CRUD API for managing a product catalog, built with FastAPI and SQLite.
 
@@ -7,54 +7,41 @@ A simple CRUD API for managing a product catalog, built with FastAPI and SQLite.
 - Get all products
 - Get a single product by name
 - Create a new product
-- Update an existing product
+- Update a product
 - Delete a product
 - Input validation with Pydantic
-- Error handling for non-existent products
 
 ## Tech Stack
 
-- Python 3.13
+- Python 3
 - FastAPI
-- SQLite (via sqlite3)
+- SQLite
 - Pydantic
 
 ## Installation
 
-1. Clone the repository:
+Clone the repository and install dependencies:
 
-   ```bash
- git clone https://github.com/SajjadEf/catalog-api.git
-   cd catalog-api
-   
-   
-   
-2. Install dependencies:
-
-
-   ```bash
- pip install fastapi uvicorn
-   
+`git clone https://github.com/SajjadEf/catalog-api.git`  
+`cd catalog-api`  
+`pip install fastapi uvicorn`
 
 ## Usage
 
 Run the server:
-```bash
-python -m uvicorn main_db:app --reload
-```
-   
-   
-Open your browser at http://127.0.0.1:8000/docs to see the interactive Swagger documentation.
 
+`python -m uvicorn simple_api_with_db:app --reload`
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/items` | Get all products |
-| GET | `/items/{name}` | Get a single product |
-| POST | `/item/{name}` | Create a new product |
-| PUT | `/items/{name}` | Update a product |
-| DELETE | `/item/{name}` | Delete a product |
+Then open `http://127.0.0.1:8000/docs`
+
+## API Endpoints
+
+- GET `/items` - All products
+- GET `/items/{name}` - One product
+- POST `/item/{name}` - Create product
+- PUT `/items/{name}` - Update product
+- DELETE `/item/{name}` - Delete product
 
 ## Author
 
-**Sajjad Ef** – [GitHub Profile](https://github.com/SajjadEf)
+Sajjad Ef - [GitHub](https://github.com/SajjadEf)
