@@ -26,7 +26,7 @@ A simple CRUD API for managing a product catalog, built with FastAPI and SQLite.
    ```bash
  git clone https://github.com/SajjadEf/catalog-api.git
    cd catalog-api
-   ```
+   
    
    
 2. Install dependencies:
@@ -34,7 +34,7 @@ A simple CRUD API for managing a product catalog, built with FastAPI and SQLite.
 
    ```bash
  pip install fastapi uvicorn
-   ```
+   
 
 ## Usage
 
