@@ -2,6 +2,21 @@ from fastapi import FastAPI
 import sqlite3
 from pydantic import BaseModel, Field, validator
 
+def create_database():
+    conn = sqlite3.connect("catalog2.db")
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS catalog (
+            name TEXT PRIMARY KEY,
+            price REAL,
+            number_in_box INTEGER,
+            total_inventory INTEGER
+        )
+    ''')
+    conn.commit()
+    conn.close()
+create_database()
+
 def get_db():
     connection = sqlite3.connect("catalog2.db")
     connection.row_factory = sqlite3.Row
